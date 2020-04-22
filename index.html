@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <div class="wrapper">
+        <div class="left">
+            <div class="overlay">
+                <div class="container">
+                    <div class="logo"><span class="material-icons">
+                        subject
+                        </span>
+                        Domy
+                    </div>
+                    <h1><span style="color: rgb(2, 175, 25);">Prioritize</span> your work and get the best out of you
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="list">
+                <h2>Work for today</h2>
+                <div class="tasklist" id="tasklist">
+                </div>
+                <div id="newtask">
+                    <input type="text" id="taskAction" placeholder="Type a new task" />
+                    <button onclick="Add()">Add</button>
+                </div>
+                <button class="add" id="newbutton" onclick="addHandler()">
+                    New task
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
