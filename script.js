@@ -25,6 +25,7 @@ function addHandler() {
     document.getElementById("newbutton").style.display = "none";
     document.getElementById("newtask").style.display = "flex";
     document.getElementById("taskAction").value="";
+    document.getElementById("taskAction").focus();
     document.getElementById("add").onclick=Cancel;
     document.getElementById("add").innerText="Cancel"
 }
