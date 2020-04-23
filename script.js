@@ -9,10 +9,24 @@ function init(){
     }
     display();
 }
+
+function changeHandler(){
+    let input = document.getElementById("taskAction");
+    if(input.value.length>0){
+        document.getElementById("add").onclick=Add;
+        document.getElementById("add").innerText="Add"
+    }
+    else{
+        document.getElementById("add").onclick=Cancel;
+        document.getElementById("add").innerText="Cancel"
+    }
+}
 function addHandler() {
     document.getElementById("newbutton").style.display = "none";
     document.getElementById("newtask").style.display = "flex";
     document.getElementById("taskAction").value="";
+    document.getElementById("add").onclick=Cancel;
+    document.getElementById("add").innerText="Cancel"
 }
 function Add() {
     let action = document.getElementById("taskAction").value;
@@ -25,7 +39,10 @@ function Add() {
     document.getElementById("newbutton").style.display = "block";
     display();
 }
-
+function Cancel(){
+    document.getElementById("newtask").style.display = "none";
+    document.getElementById("newbutton").style.display = "block";
+}
 function complete(id) {
     console.log(!task[id].completed)
     task[id].completed = !task[id].completed;

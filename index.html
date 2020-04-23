@@ -34,8 +34,8 @@
                 <div class="tasklist" id="tasklist">
                 </div>
                 <div id="newtask">
-                    <input type="text" id="taskAction" placeholder="Type a new task" />
-                    <button onclick="Add()">Add</button>
+                    <input type="text" id="taskAction" placeholder="Type a new task" oninput="changeHandler()"/>
+                    <button onclick="Cancel()" id="add">Cancel</button>
                 </div>
                 <button class="add" id="newbutton" onclick="addHandler()">
                     New task
